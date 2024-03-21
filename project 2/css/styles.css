@@ -1,0 +1,95 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+ }
+/* Style the navigation menu */
+.topnav {
+    overflow: hidden;
+    background-color: white;
+    position: relative;
+  }
+  
+  /* Hide the links inside the navigation menu (except for logo/home) */
+  .topnav #myLinks {
+    display: none;
+  }
+  
+  /* Style navigation menu links */
+  .topnav a {
+    color: black;
+    padding: 10px 10px;
+    text-decoration: none;
+    font-size: 20px;
+    display: block;
+  }
+  
+  /* Style the hamburger menu */
+  .topnav a.icon {
+    background: none;
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  
+  /* Add a grey background color on mouse-over */
+  .topnav a:hover {
+    background-color: white;
+    color: black;
+  }
+  
+  /* Style the active link (or home/logo) */
+  .active {
+    background-color: white;
+    color: rgb(241, 168, 216);
+  }
+
+ /*HIDE THE DESKTOP NAV ON MOBILE*/
+.desktop-nav{
+    display:none;
+}
+
+.desktop-nav a{
+    color: black;
+    padding: 10px 10px;
+    text-decoration: none;
+    font-size: 20px;
+    display: block;
+    align-content: space-between;
+}
+
+.bio-nav{
+    display: flex;
+    align-content: right;
+}
+
+.logo-icon{
+    max-width: 50px;
+    height: auto;
+}
+.headshots-home{
+    max-width: 40%;
+    height: auto;
+}
+
+.homepage-headshots{
+    align-content: center;
+}
+
+.homepage-headshots > img{
+    border: 5px;
+    border-radius: 10%;
+    border-color: aquamarine;
+}
+
+   /* media queries for mobile vs desktop */
+
+   @media screen and (min-width:1081px){
+    /*Hide the mobile nav once the screen is 1081 pixels wide*/
+    .topnav{
+        display:none;
+    }
+    /*Show the desktop nav*/
+    .desktop-nav{
+        display:flex;
+    }
+}
