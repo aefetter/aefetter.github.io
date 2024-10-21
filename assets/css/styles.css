@@ -669,6 +669,15 @@ header {
   outline: none;
 }
 
+.portfolio__subtitle{
+  font-size: var(--med-font-size);
+  font-weight: bold;
+  color: var(--first-color);
+  text-align: center;
+  display: block;
+  margin-bottom: var(--mb-3);
+}
+
 /*==================== FOOTER ====================*/
 
 .footer {
@@ -681,13 +690,13 @@ header {
   background-color: var(--first-color-second);
   padding: 2rem 0 3rem;
 }
-.portfolio__title {
+/* .portfolio__title {
   font-size: var(--h1-font-size);
   margin-bottom: var(--mb-0-25);
 }
 .portfolio__subtitle {
   font-size: var(--small-font-size);
-}
+} */
 .footer__links {
   display: flex;
   flex-direction: column;
