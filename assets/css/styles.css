@@ -793,6 +793,9 @@ header {
   }
   .qualification__data {
     gap: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
   }
   .services__container {
     grid-template-columns: max-content;
@@ -809,7 +812,9 @@ header {
   }
   /* stack work logo vertically on mobile */
   .qual-logo{
+    /* display: flex; */
     direction: row;
+    /* gap: 2rem; */
   }
 }
 
