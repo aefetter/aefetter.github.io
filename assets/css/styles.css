@@ -641,6 +641,10 @@ header {
   transform: translateX(0.25rem);
 }
 
+.portfolio__button {
+  margin-top: 0.5rem; /* Reduce the margin to move the button closer */
+}
+
 .swiper-button-prev::after,
 .swiper-button-next::after {
   content: "";
