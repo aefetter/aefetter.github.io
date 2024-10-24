@@ -126,7 +126,7 @@ h4 {
 }
 
 ul {
-  list-style: disc;
+  list-style: none;
 }
 
 a {
@@ -475,6 +475,10 @@ header {
   display: flex;
   justify-content: space-evenly;
   margin-bottom: var(--mb-2-5);
+}
+
+.about__info>ul{
+  list-style-type: disc;
 }
 
 .about__info-title {
