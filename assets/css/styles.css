@@ -668,7 +668,7 @@ header {
 }
 
 .swiper-container-horizontal > .swiper-pagination-bullets {
-  bottom: 0.5rem;
+  bottom: 2rem;
 }
 
 .swiper-pagination-bullet-active {
