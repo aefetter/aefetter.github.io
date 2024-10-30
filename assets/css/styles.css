@@ -466,6 +466,85 @@ header {
   align-self: center;
 }
 
+/* about image slider */
+.accordion {
+  width: 100%;
+  max-width: 1080px;
+  overflow: hidden;
+  margin: 50px auto;
+}
+
+.accordion ul {
+  width: 100%;
+  display: block; /* Change from table to block */
+  margin: 0;
+  padding: 0;
+}
+
+.accordion ul li {
+  display: block; /* Change from table-cell to block */
+  vertical-align: bottom;
+  position: relative;
+  width: 100%; /* Change from 16.666% to 100% */
+  height: 100px; /* Set initial small height */
+  background-repeat: no-repeat;
+  background-position: center center;
+  margin-bottom: 10px; /* Add margin to separate items */
+  transition: height 0.3s ease; /* Smooth transition for height */
+}
+
+.accordion ul li div {
+  display: block;
+  overflow: hidden;
+  width: 100%;
+}
+
+.accordion ul li div a {
+  display: block;
+  height: 100px; /* Set initial small height */
+  width: 100%;
+  position: relative;
+  z-index: 3;
+  padding: 15px 20px;
+  box-sizing: border-box;
+  color: #fff;
+  text-decoration: none;
+  font-family: Open Sans, sans-serif;
+  transition: all 200ms ease;
+}
+
+.accordion ul:hover li {
+  width: 100%; /* Ensure all items take full width */
+}
+
+.accordion ul:hover li:hover {
+  height: 300px; /* Increase height on hover */
+}
+
+.accordion ul:hover li:hover a {
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.accordion ul:hover li:hover a * {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+@media screen and (max-width: 600px) {
+  .accordion {
+    height: auto;
+  }
+  .accordion ul li,
+  .accordion ul li:hover,
+  .accordion ul:hover li,
+  .accordion ul:hover li:hover {
+    position: relative;
+    display: block; /* Ensure items stack vertically on small screens */
+    width: 100%;
+    transition: none;
+  }
+}
+
 .about__description {
   text-align: center;
   margin-bottom: var(--mb-2-5);
@@ -504,36 +583,80 @@ header {
 
 /* about image slider */
 .accordion {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-
-.accordion-item {
-  position: relative;
-  overflow: hidden;
-  cursor: pointer;
-}
-
-.accordion-image {
   width: 100%;
-  transition: transform 0.3s ease;
-}
-
-.accordion-content {
-  max-height: 0;
+  max-width: 1080px;
   overflow: hidden;
-  transition: max-height 0.3s ease;
-  background-color: #f9f9f9;
-  padding: 1rem;
+  margin: 50px auto;
 }
 
-.accordion-item.active .accordion-image {
-  transform: scale(1.1);
+.accordion ul {
+  width: 100%;
+  display: block; /* Change from table to block */
+  margin: 0;
+  padding: 0;
 }
 
-.accordion-item.active .accordion-content {
-  max-height: 200px; /* Adjust as needed */
+.accordion ul li {
+  display: block; /* Change from table-cell to block */
+  vertical-align: bottom;
+  position: relative;
+  width: 100%; /* Change from 16.666% to 100% */
+  height: 250px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  margin-bottom: 10px; /* Add margin to separate items */
+}
+
+.accordion ul li div {
+  display: block;
+  overflow: hidden;
+  width: 100%;
+}
+
+.accordion ul li div a {
+  display: block;
+  height: 250px;
+  width: 100%;
+  position: relative;
+  z-index: 3;
+  padding: 15px 20px;
+  box-sizing: border-box;
+  color: #fff;
+  text-decoration: none;
+  font-family: Open Sans, sans-serif;
+  transition: all 200ms ease;
+}
+
+.accordion ul:hover li {
+  width: 100%; /* Ensure all items take full width */
+}
+
+.accordion ul:hover li:hover {
+  height: 300px; /* Increase height on hover */
+}
+
+.accordion ul:hover li:hover a {
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.accordion ul:hover li:hover a * {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+@media screen and (max-width: 600px) {
+  .accordion {
+    height: auto;
+  }
+  .accordion ul li,
+  .accordion ul li:hover,
+  .accordion ul:hover li,
+  .accordion ul:hover li:hover {
+    position: relative;
+    display: block; /* Ensure items stack vertically on small screens */
+    width: 100%;
+    transition: none;
+  }
 }
 
 /*==================== SKILLS ====================*/
@@ -964,9 +1087,9 @@ header {
   .about__container {
     column-gap: 5rem;
   }
-  .about__img {
+  /* .about__img {
     width: 350px;
-  }
+  } */
   .about__description {
     text-align: initial;
   }
