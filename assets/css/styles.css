@@ -466,84 +466,10 @@ header {
   align-self: center;
 }
 
-.accordion {
-  width: 100%;
-  overflow: hidden;
-  margin: 50px auto;
-}
-
-.accordion ul {
-  width: 100%;
-  display: block;
-  margin: 0;
-  padding: 0;
-  height: 100%; /* Ensure the ul takes the full height of the container */
-}
-
-.accordion ul li {
-  display: block;
-  vertical-align: bottom;
-  position: relative;
-  width: 100%;
-  height: 100px; /* Set initial small height */
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: contain; /* Ensure the image size remains consistent */
-  margin-bottom: 10px;
-  transition: height 0.3s ease; /* Smooth transition for height */
-}
-
-/* Example background images */
-.accordion ul li:nth-child(1) { background-image: url('/assets/img/about/uncdukegame.jpeg'); }
-.accordion ul li:nth-child(2) { background-image: url('/assets/img/about/lakeyellowstone.JPG'); }
-.accordion ul li:nth-child(3) { background-image: url('/assets/img/about/billslondon.jpeg'); }
-.accordion ul li:nth-child(4) { background-image: url('/assets/img/about/bigsky.JPG'); }
-.accordion ul li:nth-child(5) { background-image: url('/assets/img/about/vassarcollegeatsunset.JPG'); }
-
-.accordion ul li div {
-  display: block;
-  overflow: hidden;
-  width: 100%;
-}
-
-.accordion ul li div a {
-  display: block;
-  height: 100px; /* Set initial small height */
-  width: 100%;
-  position: relative;
-  z-index: 3;
-  padding: 15px 20px;
-  box-sizing: border-box;
-  color: #fff;
-  text-decoration: none;
-  font-family: Open Sans, sans-serif;
-  transition: all 200ms ease;
-}
-
-.accordion ul:hover li:hover {
-  height: 300px; /* Increase height on hover */
-  background-size: contain; /* Ensure the image size remains consistent on hover */
-}
-
-@media screen and (max-width: 600px) {
-  .accordion {
-    width: auto;
-  }
-  .accordion ul li,
-  .accordion ul li:hover,
-  .accordion ul:hover li,
-  .accordion ul:hover li:hover {
-    position: relative;
-    display: block; /* Ensure items stack vertically on small screens */
-    height: 100%;
-    transition: none;
-  }
-}
-
-
 .about__description {
   text-align: center;
   margin-bottom: var(--mb-2-5);
+  margin-top: 0;
 }
 
 .about__info {
