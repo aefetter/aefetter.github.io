@@ -183,3 +183,35 @@ themeButton.addEventListener("click", () => {
   localStorage.setItem("selected-icon", getCurrentIcon());
 });
 
+/*==================== ACCORDION HEIGHT ADJUSTMENT ====================*/
+document.addEventListener("DOMContentLoaded", function () {
+  const aboutDescription = document.querySelector(".about__description");
+  const accordionContainer = document.querySelector(".accordion");
+  const accordionItems = document.querySelectorAll(".accordion ul li");
+
+  if (aboutDescription && accordionContainer) {
+    const aboutHeight = aboutDescription.offsetHeight;
+    accordionContainer.style.height = `${aboutHeight}px`;
+
+    function adjustAccordionHeight() {
+      const scrollY = window.scrollY;
+      const windowHeight = window.innerHeight;
+
+      accordionItems.forEach((item, index) => {
+        const itemTop = item.getBoundingClientRect().top + scrollY;
+        const distanceFromTop = scrollY - itemTop + windowHeight / 2;
+
+        if (distanceFromTop > 0 && distanceFromTop < windowHeight) {
+          const height = Math.min(300, 100 + (distanceFromTop / windowHeight) * 200);
+          item.style.height = `${height}px`;
+        } else {
+          item.style.height = "100px";
+        }
+      });
+    }
+
+    window.addEventListener("scroll", adjustAccordionHeight);
+    adjustAccordionHeight(); // Initial call to set heights based on initial scroll position
+  }
+});
+

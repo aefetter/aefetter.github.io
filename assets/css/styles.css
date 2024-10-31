@@ -466,32 +466,39 @@ header {
   align-self: center;
 }
 
-/* about image slider */
 .accordion {
   width: 100%;
-  max-width: 1080px;
   overflow: hidden;
   margin: 50px auto;
 }
 
 .accordion ul {
   width: 100%;
-  display: block; /* Change from table to block */
+  display: block;
   margin: 0;
   padding: 0;
+  height: 100%; /* Ensure the ul takes the full height of the container */
 }
 
 .accordion ul li {
   display: block;
   vertical-align: bottom;
   position: relative;
-  width: auto; /* Change from 16.666% to 100% */
-  height: 20%; /* Set initial small height */
+  width: 100%;
+  height: 100px; /* Set initial small height */
   background-repeat: no-repeat;
   background-position: center center;
-  margin-bottom: 10px; /* Add margin to separate items */
+  background-size: contain; /* Ensure the image size remains consistent */
+  margin-bottom: 10px;
   transition: height 0.3s ease; /* Smooth transition for height */
 }
+
+/* Example background images */
+.accordion ul li:nth-child(1) { background-image: url('/assets/img/about/uncdukegame.jpeg'); }
+.accordion ul li:nth-child(2) { background-image: url('/assets/img/about/lakeyellowstone.JPG'); }
+.accordion ul li:nth-child(3) { background-image: url('/assets/img/about/billslondon.jpeg'); }
+.accordion ul li:nth-child(4) { background-image: url('/assets/img/about/bigsky.JPG'); }
+.accordion ul li:nth-child(5) { background-image: url('/assets/img/about/vassarcollegeatsunset.JPG'); }
 
 .accordion ul li div {
   display: block;
@@ -513,18 +520,9 @@ header {
   transition: all 200ms ease;
 }
 
-
 .accordion ul:hover li:hover {
-  height: 100%; /* Increase height on hover */
-}
-
-/* .accordion ul:hover li:hover a {
-  background: rgba(0, 0, 0, 0.4);
-} */
-
-.accordion ul:hover li:hover a * {
-  opacity: 1;
-  transform: translateX(0);
+  height: 300px; /* Increase height on hover */
+  background-size: contain; /* Ensure the image size remains consistent on hover */
 }
 
 @media screen and (max-width: 600px) {
@@ -542,12 +540,6 @@ header {
   }
 }
 
-/* accordion imgs */
-.accordion ul li:nth-child(1) { background-image: url("/assets/img/about/uncdukegame.jpeg"); }
-.accordion ul li:nth-child(2) { background-image: url("/assets/img/about/lakeyellowstone.JPG"); }
-.accordion ul li:nth-child(3) { background-image: url("/assets/img/about/billslondon.jpeg"); }
-.accordion ul li:nth-child(4) { background-image: url("/assets/img/about/bigsky.JPG"); }
-.accordion ul li:nth-child(5) { background-image: url("/assets/img/about/vassarcollegeatsunset.JPG"); }
 
 .about__description {
   text-align: center;
